@@ -1,10 +1,10 @@
 {
   "name": "@okami.sh/okami-model",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "okami model",
   "main": "dist/index.js",
   "scripts": {
-    "install": "npm install"
+    "build": "npm install"
   },
   "keywords": [],
   "author": "mushon",
@@ -19,5 +19,13 @@
   },
   "engines": {
     "node": "12.22.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mushon-okami@github.com/mushon-okami/okami-model.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mushon-okami/okami-model/issues"
+  },
+  "homepage": "https://github.com/mushon-okami/okami-model#readme"
 }
