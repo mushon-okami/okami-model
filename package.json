@@ -1,10 +1,11 @@
 {
   "name": "@okami.sh/okami-model",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "okami model",
   "main": "dist/index.js",
   "scripts": {
-    "install": "tsc -p ."
+    "install": "rm -rf .dist && tsc -p .",
+    "build": "rm -rf .dist && tsc -p ."
   },
   "keywords": [],
   "author": "mushon",
