@@ -4,7 +4,7 @@
   "description": "okami model",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npm install"
+    "install": "tsc -p ."
   },
   "keywords": [],
   "author": "mushon",
