@@ -1,6 +1,6 @@
 {
   "name": "@okami.sh/okami-model",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "okami model",
   "main": "dist/index.js",
   "scripts": {
