@@ -52,7 +52,6 @@ export interface Deployment extends BaseModel {
     image: string;
     imageUrl?: string;
   };
-  args: string;
   envVars: KeyVal[];
   portMappings: KeyVal[];
   size: string;
