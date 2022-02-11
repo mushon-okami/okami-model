@@ -55,7 +55,8 @@ export interface Deployment extends BaseModel {
   envVars: KeyVal[];
   portMappings: KeyVal[];
   size: string;
-
+  exposeAsService: boolean;
+  portMapping: KeyVal[];
   // #regions relations
   account: string | mongoose.Types.ObjectId | Account;
   executions: string[] | mongoose.Types.ObjectId[] | DeploymentExecution[];

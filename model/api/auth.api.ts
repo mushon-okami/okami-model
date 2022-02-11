@@ -22,7 +22,7 @@ class AuthApi {
       );
       return res.data;
     } catch (err) {
-      // todo logging
+      console.error(err)
       throw err;
     }
   }
@@ -35,7 +35,7 @@ class AuthApi {
       );
       return res.data;
     } catch (err) {
-      // todo logging
+      console.error(err)
       throw err;
     }
   }
