@@ -25,7 +25,6 @@ export interface BaseModel {
 }
 
 export interface User extends BaseModel {
-  iod?: string;
   username: string;
   publicKey: string;
   nonce?: number;
@@ -34,13 +33,11 @@ export interface User extends BaseModel {
 }
 
 export interface Account extends BaseModel {
-  iod?: string;
   name: string;
   owner: string | User | mongoose.Types.ObjectId;
 }
 
 export interface Deployment extends BaseModel {
-  iod?: string;
   name: string;
   costPerHour?: number;
   what: {
@@ -64,16 +61,15 @@ export interface Deployment extends BaseModel {
 
 
 export interface K8Deployment extends BaseModel {
-  deployOID: string; 
   replicas: number;
   availableReplicas: string; 
   created: number;
-  accountIod: string; 
+  accountId: string; 
   type: string;  /// possible values - DELETED, ADDED, MODIFIED
 }
 
 export interface logEvent extends BaseModel {
-  deployOID: string;
+  deployId: string;
   chunk: string;
 }
 export interface DeploymentExecution extends BaseModel {
