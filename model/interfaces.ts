@@ -29,6 +29,7 @@ export interface User extends BaseModel {
   publicKey: string;
   nonce?: number;
   joinData?: Date;
+  githubInstallationId: string;
   accounts?: string[] | Account[] | mongoose.Types.ObjectId[];
 }
 
