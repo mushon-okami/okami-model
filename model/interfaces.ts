@@ -54,6 +54,7 @@ export interface Deployment extends BaseModel {
   portMappings: KeyVal[];
   size: string;
   exposeAsService: boolean;
+  githubInstallationId: string;
   // #regions relations
   account: string | mongoose.Types.ObjectId | Account;
   executions: string[] | mongoose.Types.ObjectId[] | DeploymentExecution[];
