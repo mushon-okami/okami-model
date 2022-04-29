@@ -2,7 +2,12 @@ import mongoose from 'mongoose'
 import { EDeploymentExecutionStatus } from './enums'
 
 //#region Auth
-
+export interface GitHubAuthInstallId {
+	githubInstallationId: string
+}
+export interface GitHubAuthReposListResponse {
+	repos: string[]
+}
 export interface AuthLoginOrRegister {
 	publicKey: User['publicKey']
 	username: User['username']
@@ -24,6 +29,9 @@ export interface BaseModel {
 	_id?: any
 }
 
+export interface GithubRepoList {
+	repositories: string[]
+}
 export interface User extends BaseModel {
 	username: string
 	publicKey: string
@@ -57,6 +65,7 @@ export interface Deployment extends BaseModel {
 	// #regions relations
 	account: string | mongoose.Types.ObjectId | Account
 	executions: string[] | mongoose.Types.ObjectId[] | DeploymentExecution[]
+	status: string
 	// #endregion relations
 }
 
