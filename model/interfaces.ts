@@ -66,6 +66,7 @@ export interface Deployment extends BaseModel {
 	account: string | mongoose.Types.ObjectId | Account
 	executions: string[] | mongoose.Types.ObjectId[] | DeploymentExecution[]
 	status: string
+	deploymentType: string
 	// #endregion relations
 }
 
