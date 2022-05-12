@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import { EDeploymentExecutionStatus } from './enums'
+import { EDeploymentStatus } from './enums'
 
 //#region Auth
 export interface GitHubAuthInstallId {
@@ -64,8 +64,7 @@ export interface Deployment extends BaseModel {
 	githubInstallationId: string
 	// #regions relations
 	account: string | mongoose.Types.ObjectId | Account
-	executions: string[] | mongoose.Types.ObjectId[] | DeploymentExecution[]
-	status: string
+	status: EDeploymentStatus
 	deploymentType: string
 	// #endregion relations
 }
@@ -82,11 +81,6 @@ export interface logEvent extends BaseModel {
 	deployId: string
 	chunk: string
 }
-export interface DeploymentExecution extends BaseModel {
-	status: EDeploymentExecutionStatus
-	statusChange: Record<string, EDeploymentExecutionStatus> | Map<string, EDeploymentExecutionStatus>
-}
-
 export interface KeyVal {
 	key: string
 	value: string

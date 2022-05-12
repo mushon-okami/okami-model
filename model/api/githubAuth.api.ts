@@ -9,9 +9,9 @@ class GitAuthApi {
 		return `${configApi.baseUrl}/github`
 	}
 
-	async listGithubRepos(installationId: GitHubAuthInstallId): Promise<GitHubAuthReposListResponse> {
+	async listGithubRepos(installationId: GitHubAuthInstallId, userId: string): Promise<GitHubAuthReposListResponse> {
 		try {
-			const res = (await apiClient.http.get<GitHubAuthReposListResponse>(`${this._getApiUrl()}/repositories/${installationId}`)) as AxiosResponse<GitHubAuthReposListResponse>
+			const res = (await apiClient.http.get<GitHubAuthReposListResponse>(`${this._getApiUrl()}/${userId}/repositories/${installationId}`)) as AxiosResponse<GitHubAuthReposListResponse>
 			return res.data
 		} catch (err) {
 			console.error(err)
