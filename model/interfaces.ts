@@ -56,7 +56,6 @@ export interface Deployment extends BaseModel {
 	}
 	where: {
 		image: string
-		imageUrl?: string
 	}
 	envVars: KeyVal[]
 	portMappings: KeyVal[]
