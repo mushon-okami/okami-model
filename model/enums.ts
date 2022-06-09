@@ -4,6 +4,7 @@ export enum EDeploymentStatus {
 	down = 'down',
 	running = 'running',
 	loading = 'loading',
+	unknown = 'unknown',
 }
 
 export enum EDeploymentImageType {

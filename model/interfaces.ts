@@ -51,6 +51,7 @@ export interface Deployment extends BaseModel {
 	costPerHour?: number
 	what: {
 		git: string
+		branch: string
 		cmd: string
 	}
 	where: {
