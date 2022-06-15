@@ -64,9 +64,20 @@ export interface Deployment extends BaseModel {
 	githubInstallationId: string
 	// #regions relations
 	account: string | mongoose.Types.ObjectId | Account
-	status: EDeploymentStatus
+	status: string
+	containers: Map<string, DeploymentContainer>
 	deploymentType: string
 	// #endregion relations
+}
+
+export interface DeploymentContainer extends BaseModel {
+	status: string
+	startTime: string
+	podErrorMessages?: Array<string>
+}
+export interface FullUpdateBody extends BaseModel {
+	deployment: Deployment
+	restartMode: string
 }
 
 export interface K8Deployment extends BaseModel {
