@@ -20,7 +20,7 @@ export interface AuthVerify {
 
 export interface AuthVerifyResponse {
 	valid: boolean
-	lastLogin: Date
+	lastLogin?: Date
 	user: User
 }
 //#endregion Auth
