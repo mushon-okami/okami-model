@@ -45,6 +45,7 @@ export interface User extends BaseModel {
 export interface Account extends BaseModel {
 	name: string
 	owner: string | User | mongoose.Types.ObjectId
+	ownerPublicKey: string 
 }
 
 export interface Deployment extends BaseModel {
