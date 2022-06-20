@@ -10,7 +10,7 @@ export interface GitHubAuthReposListResponse {
 }
 export interface AuthLoginOrRegister {
 	publicKey: User['publicKey']
-	username: User['username']
+	contactDetails: User['contactDetails']
 }
 
 export interface AuthVerify {
@@ -34,7 +34,7 @@ export interface GithubRepoList {
 	repositories: string[]
 }
 export interface User extends BaseModel {
-	username: string
+	contactDetails: string
 	publicKey: string
 	nonce?: number
 	joinData?: Date
