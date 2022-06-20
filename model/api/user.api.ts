@@ -15,6 +15,15 @@ class UserApi extends CRUDApi<User> {
 	constructor({ apiClient }: { apiClient: IApiClient }) {
 		super({ apiClient })
 	}
+	async getUserByPublicKey(publickey: string) {
+		try {
+			const res = await apiClient.http.get<User>(`${this.getApiUrl()}/publicKey/${publickey}`)
+			return res.data
+		} catch (err) {
+			console.error(err)
+			throw err
+		}
+	}
 }
 
 export const userApi = new UserApi({ apiClient })
